@@ -12,16 +12,16 @@
 
 const isPalindrome = (head) => {
   // create empty array
-  const arr = []
-  
+  const arr = [];
+
   // only iterate if head != null
-  while(head) {
-      // push head.val into array
-      arr.push(head.val)
-      // set head to head.next to move to the next node in linked list
-      head = head.next
-  };
-  
+  while (head) {
+    // push head.val into array
+    arr.push(head.val);
+    // set head to head.next to move to the next node in linked list
+    head = head.next;
+  }
+
   // return boolean value of forward and backward arr
-  return arr.join(',') === arr.reverse().join(',')
+  return arr.join(",") === arr.reverse().join(",");
 };
