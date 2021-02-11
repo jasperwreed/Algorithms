@@ -4,9 +4,9 @@
  * @return {number[]}
  */
 
- const twoSum = (nums, target) => {
+const twoSum = (nums: number[], target: number): number[] => {
   //  empty array to push correct values into
-   let result = [];
+  let result = [];
 
   //  iterate over nums array
   for(let i = 0; i < nums.length; i++) {
@@ -24,4 +24,7 @@
   }
 
   return result
- }
+}
+
+
+
