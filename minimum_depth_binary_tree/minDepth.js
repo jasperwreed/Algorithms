@@ -1,12 +1,18 @@
-const minDepth = root => {
+var minDepth = function(root) {
     if (!root) return null
+    let depth = 1
+    let arr = []
     
-    let right = minDepth(root.right)
-    let left = minDepth(root.left)
+    arr.push(root)
     
-    if (root.right && root.left) {
-        return Math.min(left, right) + 1
-    } else {
-        return Math.max(left, right) + 1
+    while (arr.length) {
+        let constantLength = arr.length
+        for (let i = 0; i < constantLength; i++) {
+            let current = arr.shift()
+            if (!current.left && !current.right) return depth
+            if (current.left) arr.push(current.left)
+            if (current.right) arr.push(current.right)
+        }
+        depth++
     }
-}
+};
