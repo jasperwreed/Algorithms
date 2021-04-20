@@ -15,18 +15,6 @@ var minDepth = function (root) {
   }
 };
 
-const minDepth = (root) => {
-  if (!root) return null;
-
-  let right = minDepth(root.right);
-  let left = minDepth(root.left);
-
-  return (
-    (root.right && root.left ? Math.min(left, right) : Math.max(left, right)) +
-    1
-  );
-};
-
 var minDepth = function (root) {
   if (!root) return null;
   let depth = 1;
