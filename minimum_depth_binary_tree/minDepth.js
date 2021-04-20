@@ -11,6 +11,6 @@ var minDepth = function(root) {
             if (current.left) arr.push(current.left)
             if (current.right) arr.push(current.right)
         }
-        
+        depth++
     }
 };
