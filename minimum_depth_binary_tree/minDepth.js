@@ -1,7 +1,5 @@
 var minDepth = function(root) {
     if (!root) return null
-    let depth = 1
-    let arr = []
     
     arr.push(root)
     
